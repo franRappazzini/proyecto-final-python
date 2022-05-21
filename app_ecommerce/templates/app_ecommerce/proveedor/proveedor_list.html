@@ -1,0 +1,22 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+<a class="btn btn-success" href="{% url 'proveedor_crear' %}">Crear nuevo proveedor</a>
+
+<h2>Lista de Proveedores:</h2>
+
+{% if not object_list %}
+    <p>Aun no hay proveedores creados</p>
+{% else %}
+    <ul>
+        {% for prov in object_list %}
+            <li class="me-2">
+                {{prov.nombre}}
+                <a class="mx-2" href="{% url 'proveedor_detalle' prov.id %}">Detalle</a>
+                <a class="mx-2" href="{% url 'proveedor_editar' prov.id %}">Editar</a>
+                <a class="mx-2" href="{% url 'proveedor_eliminar' prov.id %}">Eliminar</a>  
+            </li>
+        {% endfor %}
+    </ul> 
+{% endif %}
+{% endblock %}

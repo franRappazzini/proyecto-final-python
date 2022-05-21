@@ -1,0 +1,20 @@
+body{
+    color: whitesmoke;
+    background-color: #363c41;
+}
+
+footer{
+    background-color: #212529;
+}
+
+.link_color-white{
+    color: whitesmoke;
+}
+
+.link_color-white:hover{
+    color: whitesmoke;
+}
+
+.avatar{
+    border-radius: 50%;
+}

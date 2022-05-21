@@ -1,0 +1,22 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+<a class="btn btn-success" href="{% url 'producto_crear' %}">Crear nuevo producto</a>
+
+<h2>Lista de Productos:</h2>
+
+{% if not object_list %}
+    <p>Aun no hay productos creados</p>
+{% else %}
+    <ul>
+        {% for prod in object_list %}
+            <li class="me-2">
+                {{prod.nombre}}
+                <a class="mx-2" href="{% url 'producto_detalle' prod.id %}">Detalle</a>
+                <a class="mx-2" href="{% url 'producto_editar' prod.id %}">Editar</a>
+                <a class="mx-2" href="{% url 'producto_eliminar' prod.id %}">Eliminar</a>  
+            </li>
+        {% endfor %}
+    </ul>   
+{% endif %}
+{% endblock %}

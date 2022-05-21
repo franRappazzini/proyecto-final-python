@@ -1,0 +1,10 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+<h1 class="text-center">Bienvenido {{user_login}}</h1>
+{% if user_login %}
+<p class="text-center">Navegue por los links para ver los listados, crear, editar y borrar</p>
+{% else %}
+<p class="text-center">Navegue por los links para ver los listados, o ingrese para obtener acceso de administrador</p>
+{% endif %}
+{% endblock %}

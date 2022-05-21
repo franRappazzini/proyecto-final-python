@@ -1,0 +1,12 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+<h3>Editar usuario</h3>
+
+<form action="" method="post"> {% csrf_token %}
+    <table>
+        {{form.as_table}}
+    </table>
+    <button type="submit" class="btn btn-primary">Editar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+<h2>Detalle de cliente:</h2>
+
+<h4>{{object.apellido}} {{object.nombre}} - {{object.email}} - {{object.edad}} años</h4>
+
+{% endblock %}

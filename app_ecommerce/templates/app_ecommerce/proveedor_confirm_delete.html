@@ -1,0 +1,8 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+   <form action="" method="post"> {% csrf_token %}
+       <h4>Estas seguro que desea borrar el proveedor: "{{object}}"?</h4>
+       <button class="btn btn-danger" type="submit" id="delete">Confirmar</button>
+   </form>
+{% endblock %}

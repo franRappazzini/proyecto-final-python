@@ -1,0 +1,22 @@
+{% extends 'app_ecommerce/base.html' %}
+{% load static %}
+{% block contenido_dinamico %}
+<a class="btn btn-success" href="{% url 'cliente_crear' %}">Crear nuevo cliente</a>
+
+<h2>Lista de Clientes:</h2>
+
+{% if not object_list %}
+    <p>Aun no hay clientes</p>
+{% else %}
+    <ul>
+        {% for cli in object_list %}
+            <li class="me-2">
+                {{cli.apellido}} {{cli.nombre}}
+                <a class="mx-2" href="{% url 'cliente_detalle' cli.id %}">Detalle</a>
+                <a class="mx-2" href="{% url 'cliente_editar' cli.id %}">Editar</a>
+                <a class="mx-2" href="{% url 'cliente_eliminar' cli.id %}">Eliminar</a>  
+            </li>
+        {% endfor %}
+    </ul>   
+{% endif %}
+{% endblock %}
