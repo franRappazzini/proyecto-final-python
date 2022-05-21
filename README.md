@@ -1,3 +1,3 @@
 # proyecto-final-python
 
-[![video](https://www.youtube.com/watch?v=nWPNize8JdE)](https://www.youtube.com/watch?v=nWPNize8JdE)
+[![video](./app_ecommerce/static/app_ecommerce/img/screen_inicio.png)](https://www.youtube.com/watch?v=nWPNize8JdE)
